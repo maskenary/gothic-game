@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://4oqgikrx11x6"]
+
+[ext_resource type="Texture2D" uid="uid://q0tsxifl3q81" path="res://Assets/bookshelf.png" id="1_lt3l6"]
+[ext_resource type="Script" uid="uid://d18m7epp1dsl6" path="res://Scripts/base_scene.gd" id="1_wvmwc"]
+[ext_resource type="PackedScene" uid="uid://d3erh4u03paa0" path="res://Scenes/door.tscn" id="2_h0fgs"]
+[ext_resource type="PackedScene" uid="uid://4gtwejqnd347" path="res://Scenes/player.tscn" id="3_hv2g0"]
+
+[node name="Location1" type="Node2D" unique_id=2143678793]
+script = ExtResource("1_wvmwc")
+
+[node name="Bookshelves" type="Node2D" parent="." unique_id=2123327749]
+
+[node name="Bookshelf7" type="Sprite2D" parent="Bookshelves" unique_id=1331573022]
+position = Vector2(348, 432)
+texture = ExtResource("1_lt3l6")
+
+[node name="Bookshelf4" type="Sprite2D" parent="Bookshelves" unique_id=518442465]
+position = Vector2(1377, 435)
+texture = ExtResource("1_lt3l6")
+
+[node name="Bookshelf3" type="Sprite2D" parent="Bookshelves" unique_id=172923105]
+position = Vector2(1032, 438)
+texture = ExtResource("1_lt3l6")
+
+[node name="Bookshelf2" type="Sprite2D" parent="Bookshelves" unique_id=795611674]
+position = Vector2(691, 435)
+texture = ExtResource("1_lt3l6")
+
+[node name="Bookshelf" type="Sprite2D" parent="Bookshelves" unique_id=1098794240]
+position = Vector2(3, 431)
+texture = ExtResource("1_lt3l6")
+
+[node name="Floor" type="Polygon2D" parent="." unique_id=1731229258]
+position = Vector2(-307.27423, -226.7229)
+scale = Vector2(1.362878, 1.3055562)
+color = Color(0.74138486, 0.74138457, 0.74138457, 1)
+polygon = PackedVector2Array(4, 746, 1914, 742, 1914.9353, 823.8586, 1916, 917, 958.5343, 919.4961, -2, 922)
+
+[node name="Door" parent="." unique_id=827367637 instance=ExtResource("2_h0fgs")]
+position = Vector2(1728, 480)
+destination_scene_name = "location_2"
+
+[node name="Player" parent="." unique_id=1445800171 instance=ExtResource("3_hv2g0")]
+position = Vector2(1600, 640)
+
+[node name="EntranceMarkers" type="Node2D" parent="." unique_id=2018731669]
+
+[node name="Location2" type="Marker2D" parent="EntranceMarkers" unique_id=778056923]
+position = Vector2(1728, 640)

@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://rd3tpjxglyat"]
+
+[ext_resource type="Texture2D" uid="uid://q0tsxifl3q81" path="res://bookshelf.png" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://dkvxuorkdb70j" path="res://player.gd" id="2_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://cy0oi2cwkdyss" path="res://player.png" id="2_h2yge"]
+
+[node name="Node" type="Node" unique_id=1780285269]
+
+[node name="Bookshelves" type="Node2D" parent="." unique_id=1527240977]
+
+[node name="Bookshelf7" type="Sprite2D" parent="Bookshelves" unique_id=1920069857]
+position = Vector2(636, 425)
+texture = ExtResource("1_0xm2m")
+
+[node name="Bookshelf6" type="Sprite2D" parent="Bookshelves" unique_id=231363089]
+position = Vector2(2001, 430)
+texture = ExtResource("1_0xm2m")
+
+[node name="Bookshelf5" type="Sprite2D" parent="Bookshelves" unique_id=1833469815]
+position = Vector2(-51, 433)
+texture = ExtResource("1_0xm2m")
+
+[node name="Bookshelf4" type="Sprite2D" parent="Bookshelves" unique_id=1198965320]
+position = Vector2(1665, 428)
+texture = ExtResource("1_0xm2m")
+
+[node name="Bookshelf3" type="Sprite2D" parent="Bookshelves" unique_id=921837224]
+position = Vector2(1320, 431)
+texture = ExtResource("1_0xm2m")
+
+[node name="Bookshelf2" type="Sprite2D" parent="Bookshelves" unique_id=1796708016]
+position = Vector2(979, 428)
+texture = ExtResource("1_0xm2m")
+
+[node name="Bookshelf" type="Sprite2D" parent="Bookshelves" unique_id=588720562]
+position = Vector2(291, 424)
+texture = ExtResource("1_0xm2m")
+
+[node name="Floor" type="Polygon2D" parent="." unique_id=958743717]
+position = Vector2(-307.27423, -0.00012207031)
+scale = Vector2(1.362878, 1)
+color = Color(0.4390493, 0.43904907, 0.43904912, 1)
+polygon = PackedVector2Array(4, 746, 1914, 742, 1914.9353, 823.8586, 1916, 917, -2, 922)
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1387715447]
+position = Vector2(1643, 625)
+script = ExtResource("2_1bvp3")
+metadata/_edit_group_ = true
+
+[node name="Sprite" type="Sprite2D" parent="Player" unique_id=1375571254]
+texture = ExtResource("2_h2yge")

@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cva7v2wjri2k8"]
+
+[ext_resource type="Texture2D" uid="uid://q0tsxifl3q81" path="res://Assets/bookshelf.png" id="1_3pbkc"]
+[ext_resource type="Script" uid="uid://d18m7epp1dsl6" path="res://Scripts/base_scene.gd" id="1_qcbeg"]
+[ext_resource type="PackedScene" uid="uid://d3erh4u03paa0" path="res://Scenes/door.tscn" id="2_2m8bd"]
+
+[node name="Location1" type="Node2D" unique_id=2143678793]
+script = ExtResource("1_qcbeg")
+
+[node name="Bookshelves" type="Node2D" parent="." unique_id=2123327749]
+
+[node name="Bookshelf" type="Sprite2D" parent="Bookshelves" unique_id=2034181177]
+position = Vector2(436, 432)
+texture = ExtResource("1_3pbkc")
+
+[node name="Bookshelf2" type="Sprite2D" parent="Bookshelves" unique_id=1454799640]
+position = Vector2(1496, 425)
+texture = ExtResource("1_3pbkc")
+
+[node name="Floor" type="Polygon2D" parent="." unique_id=1731229258]
+position = Vector2(-307.27423, -226.7229)
+scale = Vector2(1.362878, 1.3055562)
+color = Color(0.74138486, 0.74138457, 0.74138457, 1)
+polygon = PackedVector2Array(4, 746, 1914, 742, 1914.9353, 823.8586, 1916, 917, 958.5343, 919.4961, -2, 922)
+
+[node name="Door" parent="." unique_id=827367637 instance=ExtResource("2_2m8bd")]
+position = Vector2(955, 481.00003)
+scale = Vector2(1, 0.99999994)
