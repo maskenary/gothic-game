@@ -2,7 +2,7 @@ extends Area2D
 
 class_name Door
 
-@export var destination_scene_name: String
+@export var destination: Marker2D
 @onready var sprite = $Sprite2D
 var open_texture = preload("res://Assets//door_open.png")
 var closed_texture = preload("res://Assets//door_closed.png")
@@ -21,4 +21,5 @@ func _on_body_exited(body: Node2D) -> void:
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_released("ui_accept") && active == true: # Default "Enter" or "Space"
-		SceneManager.change_scene(get_owner(), destination_scene_name)
+		var player = get_tree().get_first_node_in_group("player")
+		player.global_position = destination.global_position

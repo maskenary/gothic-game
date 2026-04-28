@@ -1,11 +1,36 @@
-[gd_scene format=3 uid="uid://cva7v2wjri2k8"]
+[gd_scene format=3 uid="uid://ce4ttmehu1awi"]
 
 [ext_resource type="Texture2D" uid="uid://q0tsxifl3q81" path="res://Assets/bookshelf.png" id="1_3pbkc"]
-[ext_resource type="Script" uid="uid://d18m7epp1dsl6" path="res://Scripts/base_scene.gd" id="1_qcbeg"]
 [ext_resource type="PackedScene" uid="uid://d3erh4u03paa0" path="res://Scenes/door.tscn" id="2_2m8bd"]
 
+[sub_resource type="GDScript" id="GDScript_2m8bd"]
+script/source = "extends Node
+
+@onready var player = $Player
+@onready var entrance_markers = $EntranceMarkers
+
+func _ready():
+	if SceneManager.player: 
+		if player: # Get rid of scene's player if we already have one
+			player.queue_free()
+		
+		player = SceneManager.player
+		add_child(player)
+		print(\"creating player\")
+	
+	position_player()
+	
+func position_player():
+	var last_scene_name = SceneManager.last_scene_name
+	if last_scene_name.is_empty():
+		last_scene_name = \"any\"
+	for marker in entrance_markers.get_children():
+		if marker.name == \"any\" or marker.name == last_scene_name:
+			player.global_position = marker.global_position
+"
+
 [node name="Location2" type="Node2D" unique_id=2143678793]
-script = ExtResource("1_qcbeg")
+script = SubResource("GDScript_2m8bd")
 
 [node name="Bookshelves" type="Node2D" parent="." unique_id=2123327749]
 
@@ -26,7 +51,6 @@ polygon = PackedVector2Array(4, 746, 1914, 742, 1914.9353, 823.8586, 1916, 917, 
 [node name="Door" parent="." unique_id=827367637 instance=ExtResource("2_2m8bd")]
 position = Vector2(992, 480.00003)
 scale = Vector2(1, 0.99999994)
-destination_scene_name = "location_1"
 
 [node name="EntranceMarkers" type="Node2D" parent="." unique_id=1792488657]
 scale = Vector2(1, 0.99999994)

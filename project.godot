@@ -13,14 +13,14 @@ config_version=5
 config/name="gothic-game"
 config/features=PackedStringArray("4.6", "Forward Plus")
 
-[autoload]
-
-SceneManager="*uid://cce1vpcgyqhb"
-
 [display]
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+
+[global_group]
+
+player=""
 
 [physics]
 
