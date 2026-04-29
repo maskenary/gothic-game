@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://4oqgikrx11x6"]
+[gd_scene format=3 uid="uid://5ck8kmi7tcwf"]
 
 [ext_resource type="Texture2D" uid="uid://q0tsxifl3q81" path="res://Assets/bookshelf.png" id="1_8gbba"]
 [ext_resource type="PackedScene" uid="uid://d3erh4u03paa0" path="res://Scenes/door.tscn" id="2_jjvhh"]
@@ -11,34 +11,48 @@
 [node name="Bookshelves" type="Node2D" parent="World" unique_id=2123327749]
 
 [node name="Bookshelf7" type="Sprite2D" parent="World/Bookshelves" unique_id=1331573022]
-position = Vector2(348, 432)
+position = Vector2(384, 448)
 texture = ExtResource("1_8gbba")
 
 [node name="Bookshelf4" type="Sprite2D" parent="World/Bookshelves" unique_id=518442465]
-position = Vector2(1377, 435)
+position = Vector2(1344, 448)
 texture = ExtResource("1_8gbba")
 
 [node name="Bookshelf3" type="Sprite2D" parent="World/Bookshelves" unique_id=172923105]
-position = Vector2(1032, 438)
+position = Vector2(1024, 448)
 texture = ExtResource("1_8gbba")
 
 [node name="Bookshelf2" type="Sprite2D" parent="World/Bookshelves" unique_id=795611674]
-position = Vector2(691, 435)
+position = Vector2(704, 448)
 texture = ExtResource("1_8gbba")
 
 [node name="Bookshelf" type="Sprite2D" parent="World/Bookshelves" unique_id=1098794240]
-position = Vector2(3, 431)
+position = Vector2(64, 448)
+texture = ExtResource("1_8gbba")
+
+[node name="Bookshelf5" type="Sprite2D" parent="World/Bookshelves" unique_id=1328418796]
+position = Vector2(-1664, 448)
 texture = ExtResource("1_8gbba")
 
 [node name="Floor" type="Polygon2D" parent="World" unique_id=1731229258]
-position = Vector2(-307.27423, -226.7229)
-scale = Vector2(1.362878, 1.3055562)
+position = Vector2(-2403.34, -226.72305)
+scale = Vector2(3.3300312, 1.3055562)
 color = Color(0.74138486, 0.74138457, 0.74138457, 1)
 polygon = PackedVector2Array(4, 746, 1914, 742, 1914.9353, 823.8586, 1916, 917, 958.5343, 919.4961, -2, 922)
 
-[node name="Door" parent="World" unique_id=827367637 node_paths=PackedStringArray("destination") instance=ExtResource("2_jjvhh")]
-position = Vector2(1728, 480)
-destination = NodePath("")
+[node name="Door2" parent="World" unique_id=827367637 node_paths=PackedStringArray("destination") instance=ExtResource("2_jjvhh")]
+position = Vector2(-832, 512)
+destination = NodePath("../Door/Marker2D_1")
+
+[node name="Marker2D_2" type="Marker2D" parent="World/Door2" unique_id=896780197]
+position = Vector2(0, 128)
+
+[node name="Door" parent="World" unique_id=1873275582 node_paths=PackedStringArray("destination") instance=ExtResource("2_jjvhh")]
+position = Vector2(1792, 512)
+destination = NodePath("../Door2/Marker2D_2")
+
+[node name="Marker2D_1" type="Marker2D" parent="World/Door" unique_id=442419860]
+position = Vector2(0, 128)
 
 [node name="Player" parent="World" unique_id=1445800171 groups=["player"] instance=ExtResource("3_kry3j")]
-position = Vector2(1600, 640)
+position = Vector2(1664, 640)

@@ -11,7 +11,12 @@ config_version=5
 [application]
 
 config/name="gothic-game"
+run/main_scene="uid://5ck8kmi7tcwf"
 config/features=PackedStringArray("4.6", "Forward Plus")
+
+[autoload]
+
+SceneManager="*uid://cce1vpcgyqhb"
 
 [display]
 
