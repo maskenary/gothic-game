@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 class_name Player
 
-@export var speed = 400
+@export var speed = 50
 @onready var sprite = $Sprite
 var enabled = true
 

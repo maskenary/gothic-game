@@ -1,6 +1,6 @@
 extends Camera2D
 
-var grid_size = Vector2(1920, 1080)
+var grid_size = Vector2(160, 144)
 @onready var parent = get_parent()
 	
 func _process(delta: float) -> void:

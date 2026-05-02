@@ -27,9 +27,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_vm0jb")
 }],
-"loop": true,
+"loop": false,
 "name": &"open",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wlx7k"]
@@ -44,6 +44,7 @@ sprite_frames = SubResource("SpriteFrames_rsomn")
 animation = &"open"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=699256882]
+visible = false
 position = Vector2(0, 8)
 shape = SubResource("RectangleShape2D_wlx7k")
 
