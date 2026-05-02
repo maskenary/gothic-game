@@ -4,18 +4,30 @@ class_name Player
 
 @export var speed = 400
 @onready var sprite = $Sprite
+var enabled = true
 
 func _process(delta: float) -> void:
 	if velocity.x < 0:
 		sprite.flip_h = 1
 	elif velocity.x > 0:
 		sprite.flip_h = 0
-	
+	print(global_position)
 
 func get_input():
-	var direction = Input.get_axis("ui_left", "ui_right")
-	velocity.x = direction * speed
+	var input_direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	velocity = input_direction * speed
 
 func _physics_process(delta):
-	get_input()
-	move_and_slide()
+	if enabled:
+		get_input()
+		move_and_slide()
+
+func disable():
+	print("player disabled")
+	enabled = false
+	sprite.hide()
+
+func enable():
+	print("player enabled")
+	enabled = true
+	sprite.show()

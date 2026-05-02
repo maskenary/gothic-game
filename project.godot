@@ -20,8 +20,11 @@ SceneManager="*uid://cce1vpcgyqhb"
 
 [display]
 
-window/size/viewport_width=1920
-window/size/viewport_height=1080
+window/size/viewport_width=320
+window/size/viewport_height=180
+window/stretch/mode="viewport"
+window/stretch/scale=3.0
+window/stretch/scale_mode="integer"
 
 [global_group]
 
@@ -33,4 +36,5 @@ player=""
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
