@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://2372lgfn2goj"]
+
+[ext_resource type="Script" uid="uid://c8clc1v5l7v1w" path="res://Scripts/enemy_trigger.gd" id="1_2g0io"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kry3j"]
+size = Vector2(18, 144)
+
+[node name="EnemyTrigger" type="Area2D" unique_id=486372839 groups=["enemy_triggers"]]
+script = ExtResource("1_2g0io")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=688631433]
+shape = SubResource("RectangleShape2D_kry3j")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

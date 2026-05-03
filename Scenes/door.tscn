@@ -1,21 +1,51 @@
 [gd_scene format=3 uid="uid://d3erh4u03paa0"]
 
 [ext_resource type="Script" uid="uid://ckrt2jtwpf8h" path="res://Scripts/door.gd" id="1_p0e35"]
-[ext_resource type="Texture2D" uid="uid://cj5f7qgccb0ab" path="res://Assets/door_closed_old.png" id="2_fahql"]
+[ext_resource type="Texture2D" uid="uid://bagjembcaf1uh" path="res://Assets/door.png" id="2_p0e35"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_p0e35"]
-size = Vector2(281, 513)
+[sub_resource type="AtlasTexture" id="AtlasTexture_fahql"]
+atlas = ExtResource("2_p0e35")
+region = Rect2(0, 0, 32, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ab4ky"]
+atlas = ExtResource("2_p0e35")
+region = Rect2(32, 0, 32, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a43ba"]
+atlas = ExtResource("2_p0e35")
+region = Rect2(64, 0, 32, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w6aom"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fahql")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ab4ky")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a43ba")
+}],
+"loop": false,
+"name": &"open",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_burcv"]
+size = Vector2(26, 48)
 
 [node name="Door" type="Area2D" unique_id=827367637]
 script = ExtResource("1_p0e35")
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1514451619]
-texture = ExtResource("2_fahql")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2133217479]
+sprite_frames = SubResource("SpriteFrames_w6aom")
+animation = &"open"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=448115668]
-position = Vector2(6.5, 16.5)
-shape = SubResource("RectangleShape2D_p0e35")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1736897863]
+visible = false
+shape = SubResource("RectangleShape2D_burcv")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

@@ -26,6 +26,7 @@ func _process(delta: float) -> void:
 		else:
 			player.disable()
 			player.global_position = global_position
+			player.global_position.y += 20 # ADJUSTMENT, CHANGE THIS LATER, RETARD CODING
 			contains_player = true
 			anim_sprite.play_backwards("open")
 		

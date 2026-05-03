@@ -11,7 +11,6 @@ func _process(delta: float) -> void:
 		sprite.flip_h = 1
 	elif velocity.x > 0:
 		sprite.flip_h = 0
-	print(global_position)
 
 func get_input():
 	var input_direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
@@ -23,11 +22,9 @@ func _physics_process(delta):
 		move_and_slide()
 
 func disable():
-	print("player disabled")
 	enabled = false
 	sprite.hide()
 
 func enable():
-	print("player enabled")
 	enabled = true
 	sprite.show()

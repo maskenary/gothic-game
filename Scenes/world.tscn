@@ -1,0 +1,119 @@
+[gd_scene format=3 uid="uid://eo57i8dburij"]
+
+[ext_resource type="PackedScene" uid="uid://c0uxqt6tfca6y" path="res://Scenes/cupboard.tscn" id="1_5ukr8"]
+[ext_resource type="Texture2D" uid="uid://ym4p4pc21dgu" path="res://Assets/bookshelf.png" id="2_o06y3"]
+[ext_resource type="Texture2D" uid="uid://dfxufts3vg03u" path="res://Assets/chest.png" id="3_k7acu"]
+[ext_resource type="PackedScene" uid="uid://d3erh4u03paa0" path="res://Scenes/door.tscn" id="4_5v1tr"]
+[ext_resource type="PackedScene" uid="uid://4gtwejqnd347" path="res://Scenes/player.tscn" id="5_0fj1v"]
+[ext_resource type="PackedScene" uid="uid://2372lgfn2goj" path="res://Scenes/enemy_trigger.tscn" id="6_ikia7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_21xkr"]
+atlas = ExtResource("3_k7acu")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6bp64"]
+atlas = ExtResource("3_k7acu")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_344ge"]
+atlas = ExtResource("3_k7acu")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ynf5e"]
+atlas = ExtResource("3_k7acu")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hptm8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_21xkr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6bp64")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_344ge")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ynf5e")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="World" type="Node2D" unique_id=880670476]
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=1685472135]
+position = Vector2(0, -47.99994)
+scale = Vector2(3, 1.4999993)
+color = Color(0.22745098, 0.14901961, 0.21960784, 1)
+polygon = PackedVector2Array(0, 96, 160, 96, 160, 112.04758, 160, 128, 80.47406, 128.00002, 0, 128)
+
+[node name="Polygon2D2" type="Polygon2D" parent="." unique_id=411033965]
+position = Vector2(0, -288)
+scale = Vector2(3, 3)
+color = Color(0.11764706, 0.101960786, 0.18039216, 1)
+polygon = PackedVector2Array(0, 96, 160, 96, 160, 111.7491, 160, 128, 0, 128)
+
+[node name="Props" type="Node2D" parent="." unique_id=1425997024]
+
+[node name="Cupboard2" parent="Props" unique_id=1872115873 instance=ExtResource("1_5ukr8")]
+position = Vector2(452, 72)
+
+[node name="Cupboard" parent="Props" unique_id=2039119090 instance=ExtResource("1_5ukr8")]
+position = Vector2(92, 72)
+
+[node name="Sprite2D5" type="Sprite2D" parent="Props" unique_id=2021792280]
+position = Vector2(236, 68)
+texture = ExtResource("2_o06y3")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Props" unique_id=1435104081]
+position = Vector2(408, 68)
+texture = ExtResource("2_o06y3")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Props" unique_id=1946376411]
+position = Vector2(268, 68)
+texture = ExtResource("2_o06y3")
+
+[node name="Sprite2D8" type="Sprite2D" parent="Props" unique_id=1070591494]
+position = Vector2(376, 68)
+texture = ExtResource("2_o06y3")
+
+[node name="Sprite2D" type="Sprite2D" parent="Props" unique_id=1832322670]
+position = Vector2(20, 68)
+texture = ExtResource("2_o06y3")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Props" unique_id=1113984389]
+position = Vector2(204, 68)
+texture = ExtResource("2_o06y3")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Props" unique_id=197608106]
+position = Vector2(52, 68)
+texture = ExtResource("2_o06y3")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Props" unique_id=2044163505]
+position = Vector2(172, 68)
+texture = ExtResource("2_o06y3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Props" unique_id=1758767603]
+position = Vector2(56, 112)
+sprite_frames = SubResource("SpriteFrames_hptm8")
+
+[node name="Door" parent="Props" unique_id=827367637 node_paths=PackedStringArray("destination") instance=ExtResource("4_5v1tr")]
+position = Vector2(300, 72)
+destination = NodePath("../Door2")
+
+[node name="Door2" parent="Props" unique_id=299855099 node_paths=PackedStringArray("destination") instance=ExtResource("4_5v1tr")]
+position = Vector2(136, 72)
+destination = NodePath("../Door")
+
+[node name="Player" parent="." unique_id=1445800171 instance=ExtResource("5_0fj1v")]
+position = Vector2(64, 92)
+
+[node name="EnemyTrigger2" parent="." unique_id=486372839 instance=ExtResource("6_ikia7")]
+position = Vector2(32, 72)
+
+[node name="EnemyTrigger" parent="." unique_id=2019954403 instance=ExtResource("6_ikia7")]
+position = Vector2(104, 72)
