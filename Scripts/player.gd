@@ -5,6 +5,7 @@ class_name Player
 @export var speed = 50
 @onready var sprite = $Sprite
 var enabled = true
+var hiding = false
 
 func _process(delta: float) -> void:
 	if velocity.x < 0:

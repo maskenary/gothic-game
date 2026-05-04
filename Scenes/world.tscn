@@ -116,4 +116,4 @@ position = Vector2(64, 92)
 position = Vector2(32, 72)
 
 [node name="EnemyTrigger" parent="." unique_id=2019954403 instance=ExtResource("6_ikia7")]
-position = Vector2(104, 72)
+position = Vector2(228, 72)

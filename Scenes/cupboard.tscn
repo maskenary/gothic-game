@@ -35,7 +35,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wlx7k"]
 size = Vector2(32, 48)
 
-[node name="Cupboard" type="Area2D" unique_id=1872115873]
+[node name="Cupboard" type="Area2D" unique_id=1872115873 groups=["cupboards"]]
 script = ExtResource("1_u4kxa")
 metadata/_edit_group_ = true
 
