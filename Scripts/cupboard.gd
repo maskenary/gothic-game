@@ -10,8 +10,7 @@ func _on_body_entered(body: Node2D) -> void:
 	active = true
 	if body is Player:
 		anim_sprite.play("open")
-		
-		
+
 func _on_body_exited(body: Node2D) -> void:
 	active = false
 	if body is Player:
