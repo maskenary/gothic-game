@@ -1,11 +1,11 @@
 extends CharacterBody2D
 
-class_name Player
-
 @export var speed = 50
 @onready var sprite = $Sprite
-var enabled = true
+var can_move = true
+var can_interact = true
 var hiding = false
+var inventory = []
 
 func _process(delta: float) -> void:
 	if velocity.x < 0:
@@ -18,14 +18,14 @@ func get_input():
 	velocity = input_direction * speed
 
 func _physics_process(delta):
-	if enabled:
+	if can_move:
 		get_input()
 		move_and_slide()
 
 func disable():
-	enabled = false
+	can_move = false
 	sprite.hide()
 
 func enable():
-	enabled = true
+	can_move = true
 	sprite.show()

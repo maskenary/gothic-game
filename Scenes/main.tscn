@@ -7,11 +7,12 @@
 [node name="Main" type="Node" unique_id=434942083]
 metadata/_edit_horizontal_guides_ = [-384.0]
 
-[node name="EnemyManager" type="Node" parent="." unique_id=829160437 node_paths=PackedStringArray("hiding_timer", "death_timer", "ui")]
+[node name="EnemyManager" type="Node" parent="." unique_id=829160437 node_paths=PackedStringArray("hiding_timer", "death_timer", "ui", "video_player")]
 script = ExtResource("1_8gbba")
 hiding_timer = NodePath("HidingTimer")
 death_timer = NodePath("DeathTimer")
 ui = NodePath("../CanvasLayer/UI")
+video_player = NodePath("../CanvasLayer/VideoPlayer")
 
 [node name="HidingTimer" type="Timer" parent="EnemyManager" unique_id=1851464690]
 one_shot = true

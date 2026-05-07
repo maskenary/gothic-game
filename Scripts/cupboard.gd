@@ -8,20 +8,21 @@ var active = false
 
 func _on_body_entered(body: Node2D) -> void:
 	active = true
-	if body is Player:
+	if body.is_in_group("player"):
 		anim_sprite.play("open")
 
 func _on_body_exited(body: Node2D) -> void:
 	active = false
-	if body is Player:
+	if body.is_in_group("player"):
 		anim_sprite.play_backwards("open")
 		
 
 func _process(delta: float) -> void:
-	if Input.is_action_just_released("ui_accept") && active:
+	if Input.is_action_just_released("ui_accept") && active && player.can_interact:
 		if contains_player == true:
 			player.enable()
 			contains_player = false
+			anim_sprite.set_frame(2)
 		else:
 			player.disable()
 			player.global_position = global_position
@@ -30,5 +31,3 @@ func _process(delta: float) -> void:
 			anim_sprite.play_backwards("open")
 			
 			player_entered_cupboard.emit(self)
-		
-		

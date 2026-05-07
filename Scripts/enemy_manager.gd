@@ -19,9 +19,17 @@ func _ready() -> void:
 		cupboard.player_entered_cupboard.connect(_on_player_entered_cupboard)
 		
 func play_video(file_path: String):
-	player.enabled = false
+	player.can_move = false
+	player.can_interact = false
+	
 	video_player.stream = load(file_path)
+	video_player.visible = true
 	video_player.play()
+	await video_player.finished
+	video_player.visible = false
+	
+	player.can_move = true
+	player.can_interact = true
 
 func _on_player_entered_cupboard(cupboard: Area2D):
 	if enemy_event_active:
