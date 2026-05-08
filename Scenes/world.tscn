@@ -101,6 +101,7 @@ texture = ExtResource("2_o06y3")
 [node name="Door" parent="Props" unique_id=827367637 node_paths=PackedStringArray("destination") instance=ExtResource("4_5v1tr")]
 position = Vector2(136, 72)
 destination = NodePath("../Door2")
+locked = true
 
 [node name="Door2" parent="Props" unique_id=184398018 node_paths=PackedStringArray("destination") instance=ExtResource("4_5v1tr")]
 position = Vector2(316, 72)
@@ -111,13 +112,10 @@ position = Vector2(56, 112)
 sprite_frames = SubResource("SpriteFrames_hptm8")
 
 [node name="Key" parent="." unique_id=743802743 instance=ExtResource("7_o06y3")]
-position = Vector2(128, 132)
+position = Vector2(132, 124)
 
 [node name="EnemyTrigger2" parent="." unique_id=486372839 instance=ExtResource("6_ikia7")]
 position = Vector2(32, 72)
-
-[node name="EnemyTrigger" parent="." unique_id=2019954403 instance=ExtResource("6_ikia7")]
-position = Vector2(228, 72)
 
 [node name="Player" parent="." unique_id=1445800171 instance=ExtResource("5_0fj1v")]
 position = Vector2(116, 96)

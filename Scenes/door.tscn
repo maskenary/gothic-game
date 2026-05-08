@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://d3erh4u03paa0"]
 
 [ext_resource type="Script" uid="uid://ckrt2jtwpf8h" path="res://Scripts/door.gd" id="1_p0e35"]
+[ext_resource type="Texture2D" uid="uid://b84jj3k8r66ou" path="res://Assets/door_locked.png" id="2_fahql"]
 [ext_resource type="Texture2D" uid="uid://bagjembcaf1uh" path="res://Assets/door.png" id="2_p0e35"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fahql"]
@@ -17,6 +18,14 @@ region = Rect2(64, 0, 32, 80)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_w6aom"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fahql")
+}],
+"loop": true,
+"name": &"locked",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_fahql")
