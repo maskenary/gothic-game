@@ -1,17 +1,17 @@
 [gd_scene format=3 uid="uid://c0uxqt6tfca6y"]
 
 [ext_resource type="Script" uid="uid://bwyiae3s12nfm" path="res://Scripts/cupboard.gd" id="1_u4kxa"]
-[ext_resource type="Texture2D" uid="uid://cgh5e3hdhh5sw" path="res://Assets/cupboard.png" id="2_wlx7k"]
+[ext_resource type="Texture2D" uid="uid://ddadc177bdalp" path="res://Assets_LEYLEY/cupboard.png" id="2_wlx7k"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_j72ms"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_oxra3"]
 atlas = ExtResource("2_wlx7k")
 region = Rect2(0, 0, 48, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hs4yt"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_2wjkw"]
 atlas = ExtResource("2_wlx7k")
 region = Rect2(48, 0, 48, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vm0jb"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_rne52"]
 atlas = ExtResource("2_wlx7k")
 region = Rect2(96, 0, 48, 64)
 
@@ -19,13 +19,13 @@ region = Rect2(96, 0, 48, 64)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_j72ms")
+"texture": SubResource("AtlasTexture_oxra3")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_hs4yt")
+"texture": SubResource("AtlasTexture_2wjkw")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_vm0jb")
+"texture": SubResource("AtlasTexture_rne52")
 }],
 "loop": false,
 "name": &"open",
