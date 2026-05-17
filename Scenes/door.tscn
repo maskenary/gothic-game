@@ -1,19 +1,19 @@
 [gd_scene format=3 uid="uid://d3erh4u03paa0"]
 
 [ext_resource type="Script" uid="uid://ckrt2jtwpf8h" path="res://Scripts/door.gd" id="1_p0e35"]
-[ext_resource type="Texture2D" uid="uid://b84jj3k8r66ou" path="res://Assets/door_locked.png" id="2_fahql"]
-[ext_resource type="Texture2D" uid="uid://bagjembcaf1uh" path="res://Assets/door.png" id="2_p0e35"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fahql"]
-atlas = ExtResource("2_p0e35")
-region = Rect2(0, 0, 32, 80)
+[ext_resource type="Texture2D" uid="uid://d3h1o5nf51psq" path="res://Assets_DEMON/door_locked.png" id="2_fahql"]
+[ext_resource type="Texture2D" uid="uid://cvnqdawd0o73t" path="res://Assets_DEMON/door.png" id="3_fahql"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ab4ky"]
-atlas = ExtResource("2_p0e35")
-region = Rect2(32, 0, 32, 80)
+atlas = ExtResource("3_fahql")
+region = Rect2(0, 0, 32, 80)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a43ba"]
-atlas = ExtResource("2_p0e35")
+atlas = ExtResource("3_fahql")
+region = Rect2(32, 0, 32, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_burcv"]
+atlas = ExtResource("3_fahql")
 region = Rect2(64, 0, 32, 80)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_w6aom"]
@@ -28,13 +28,13 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_fahql")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_ab4ky")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_a43ba")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_burcv")
 }],
 "loop": false,
 "name": &"open",
@@ -50,7 +50,7 @@ metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2133217479]
 sprite_frames = SubResource("SpriteFrames_w6aom")
-animation = &"open"
+animation = &"locked"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1736897863]
 visible = false
