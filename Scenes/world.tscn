@@ -1,44 +1,15 @@
 [gd_scene format=3 uid="uid://eo57i8dburij"]
 
 [ext_resource type="PackedScene" uid="uid://c0uxqt6tfca6y" path="res://Scenes/cupboard.tscn" id="1_5ukr8"]
-[ext_resource type="Texture2D" uid="uid://ym4p4pc21dgu" path="res://Assets/bookshelf.png" id="2_o06y3"]
-[ext_resource type="Texture2D" uid="uid://dfxufts3vg03u" path="res://Assets/chest.png" id="3_k7acu"]
+[ext_resource type="Texture2D" uid="uid://e04sb2c68qxm" path="res://Assets_LEYLEY/bookshelf.png" id="2_o06y3"]
 [ext_resource type="PackedScene" uid="uid://d3erh4u03paa0" path="res://Scenes/door.tscn" id="4_5v1tr"]
 [ext_resource type="PackedScene" uid="uid://4gtwejqnd347" path="res://Scenes/player.tscn" id="5_0fj1v"]
 [ext_resource type="PackedScene" uid="uid://2372lgfn2goj" path="res://Scenes/enemy_trigger.tscn" id="6_ikia7"]
 [ext_resource type="PackedScene" uid="uid://cdst8rufyssoj" path="res://Scenes/key.tscn" id="7_o06y3"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_21xkr"]
-atlas = ExtResource("3_k7acu")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6bp64"]
-atlas = ExtResource("3_k7acu")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_344ge"]
-atlas = ExtResource("3_k7acu")
-region = Rect2(64, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ynf5e"]
-atlas = ExtResource("3_k7acu")
-region = Rect2(96, 0, 32, 32)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_hptm8"]
 animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_21xkr")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6bp64")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_344ge")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ynf5e")
-}],
+"frames": [],
 "loop": false,
 "name": &"default",
 "speed": 5.0
@@ -49,13 +20,13 @@ animations = [{
 [node name="Polygon2D" type="Polygon2D" parent="." unique_id=1685472135]
 position = Vector2(0, -47.99994)
 scale = Vector2(3, 1.4999993)
-color = Color(0.22745098, 0.14901961, 0.21960784, 1)
+color = Color(0.49019608, 0.4392157, 0.34117648, 1)
 polygon = PackedVector2Array(0, 96, 160, 96, 160, 112.04758, 160, 128, 80.47406, 128.00002, 0, 128)
 
 [node name="Polygon2D2" type="Polygon2D" parent="." unique_id=411033965]
 position = Vector2(0, -288)
 scale = Vector2(3, 3)
-color = Color(0.11764706, 0.101960786, 0.18039216, 1)
+color = Color(0.6666667, 0.58431375, 0.45882353, 1)
 polygon = PackedVector2Array(0, 96, 160, 96, 160, 111.7491, 160, 128, 0, 128)
 
 [node name="Props" type="Node2D" parent="." unique_id=1425997024]
